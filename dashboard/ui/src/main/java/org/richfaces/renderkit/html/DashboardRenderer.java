@@ -90,7 +90,7 @@ public class DashboardRenderer extends RendererBase {
 // -------------------------- OTHER METHODS --------------------------
 
     @Override
-    public void decode(FacesContext context, UIComponent component) {
+    protected void doDecode(FacesContext context, UIComponent component) {
         super.decode(context, component);
         if (!component.isRendered()) {
             return;

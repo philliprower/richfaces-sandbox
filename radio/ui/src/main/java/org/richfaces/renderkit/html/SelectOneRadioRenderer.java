@@ -15,9 +15,6 @@ public class SelectOneRadioRenderer extends InputRendererBase {
 
 // -------------------------- OTHER METHODS --------------------------
 
-    @Override
-    public void encodeEnd(FacesContext context, UIComponent component) throws IOException {
-    }
 
     @Override
     protected void doDecode(FacesContext context, UIComponent component) {

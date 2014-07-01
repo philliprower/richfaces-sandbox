@@ -166,7 +166,7 @@ public abstract class ScheduleRendererBase extends RendererBase {
 // -------------------------- OTHER METHODS --------------------------
 
     @Override
-    public void decode(FacesContext context, UIComponent component) {
+    protected void doDecode(FacesContext context, UIComponent component) {
         if (!component.isRendered()) {
             return;
         }

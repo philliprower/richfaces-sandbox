@@ -56,6 +56,7 @@
             <groupId>javax.el</groupId>
             <artifactId>el-api</artifactId>
             <scope>provided</scope>
+            <version>2.2</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.test-jsf</groupId>

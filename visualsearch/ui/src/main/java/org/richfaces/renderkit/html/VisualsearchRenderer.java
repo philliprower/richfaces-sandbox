@@ -96,7 +96,7 @@ public class VisualsearchRenderer extends InputRendererBase {
 // -------------------------- OTHER METHODS --------------------------
 
     @Override
-    public void decode(FacesContext context, UIComponent component)
+    protected void doDecode(FacesContext context, UIComponent component)
     {
         super.decode(context, component);
         if (!component.isRendered()) {
@@ -128,13 +128,12 @@ public class VisualsearchRenderer extends InputRendererBase {
     }
 
     @Override
-    public void encodeEnd(FacesContext context, UIComponent component) throws IOException
+    protected void doEncodeEnd(ResponseWriter writer, FacesContext context, UIComponent component) throws IOException
     {
         if (!(component instanceof AbstractVisualsearch)) {
             return;
         }
         String clientId = component.getClientId(context);
-        ResponseWriter writer = context.getResponseWriter();
         writer.startElement(HtmlConstants.DIV_ELEM, null);
         writer.writeAttribute(HtmlConstants.ID_ATTRIBUTE, getUtils().clientId(context, component), "type");
         writer.startElement(HtmlConstants.SCRIPT_ELEM, null);

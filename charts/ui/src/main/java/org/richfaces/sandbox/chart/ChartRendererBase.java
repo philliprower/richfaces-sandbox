@@ -117,7 +117,7 @@ public abstract class ChartRendererBase extends RendererBase {
     }
 
     @Override
-    public void decode(FacesContext context, UIComponent component) {
+    protected void doDecode(FacesContext context, UIComponent component) {
         super.decode(context, component);
         
         if(!component.isRendered()){
@@ -161,7 +161,7 @@ public abstract class ChartRendererBase extends RendererBase {
      * Method process chart tags, it collects chart options and data.  
      */
     @Override
-    public void encodeBegin(FacesContext context, UIComponent component) throws IOException {
+    protected void preEncodeBegin(FacesContext context, UIComponent component) throws IOException {
         super.encodeBegin(context, component);
 
         AbstractChart chart = (AbstractChart) component;
